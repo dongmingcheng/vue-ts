@@ -1,11 +1,14 @@
 <template>
-    <footer class="el-aside" :style="{width}">
-        <slot />
-    </footer>
+  <footer
+    class="el-aside"
+    :style="{width}"
+  >
+    <slot />
+  </footer>
 </template>
 
 <script setup lang="ts" name="ElAside">
-import { withDefaults } from 'vue';
+import { withDefaults } from 'vue'
 
 interface Props {
     width?: string

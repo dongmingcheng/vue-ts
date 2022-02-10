@@ -1,11 +1,14 @@
 <template>
-    <footer class="el-footer" :style="{height}">
-        <slot />
-    </footer>
+  <footer
+    class="el-footer"
+    :style="{height}"
+  >
+    <slot />
+  </footer>
 </template>
 
 <script setup lang="ts" name="ElFooter">
-import { withDefaults } from 'vue';
+import { withDefaults } from 'vue'
 
 interface Props {
     height?: string

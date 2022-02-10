@@ -1,7 +1,7 @@
 <template>
-    <main class="el-main">
-        <slot />
-    </main>
+  <main class="el-main">
+    <slot />
+  </main>
 </template>
 
 <script lang="ts">

@@ -1,13 +1,15 @@
 <template>
-    <header class="el-header" :style="{height}">
-        <slot />
-    </header>
-
+  <header
+    class="el-header"
+    :style="{height}"
+  >
+    <slot />
+  </header>
 </template>
 
 <script setup lang="ts" name="ElHeader">
 
-import { withDefaults } from 'vue';
+import { withDefaults } from 'vue'
 interface Props {
     height?: string
 }
