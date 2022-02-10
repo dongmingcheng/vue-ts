@@ -7,7 +7,8 @@
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:vue/vue3-recommended",
-        "@vue/typescript/recommended"
+        "@vue/typescript/recommended",
+        "vue-global-api"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",

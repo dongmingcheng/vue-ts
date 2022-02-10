@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// 导入自定义布局
+import ElContainer from './components/container'
+
+const app = createApp(App)
+app.use(ElContainer)
+    .mount('#app')
