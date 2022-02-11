@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const comp = ref('container')
+const comp = ref('form')
+const model = reactive({
+  ruleName:''
+})
 </script>
 
 <template>
@@ -31,6 +34,15 @@ const comp = ref('container')
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
+  </div>
+  <div v-if="comp == 'form'">
+    表单测试
+    <el-form :model="model">
+      <el-form-item label="姓名" prop="ruleName">
+        <el-input v-model="model.ruleName"></el-input>
+      </el-form-item>
+    </el-form>
+    {{model.ruleName}}
   </div>
 </template>
 
