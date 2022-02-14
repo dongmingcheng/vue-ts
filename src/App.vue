@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FormType } from './components/form/type';
+import { FormType } from './components/form/type'
 
 const comp = ref('form')
 const model = reactive({
@@ -55,7 +55,11 @@ const login = () => {
   </div>
   <div v-if="comp == 'form'">
     表单测试
-    <el-form :model="model" :rules="rules" ref="myForm">
+    <el-form
+      ref="myForm"
+      :model="model"
+      :rules="rules"
+    >
       <el-form-item
         label="姓名"
         prop="ruleName"

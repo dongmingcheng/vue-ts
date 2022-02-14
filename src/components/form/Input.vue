@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts" name="ElInput">
-import { emitter } from '../../emitter';
+import { emitter } from '../../emitter'
 
 
 // 实现双向绑定
@@ -29,7 +29,7 @@ const onInput = (e: Event) => {
     emitter.emit('validate')
 }
 
-const onBlur = (e:Event) => {
+const onBlur = () => {
     emitter.emit('validate')
 }
 

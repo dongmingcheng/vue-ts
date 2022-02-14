@@ -3,14 +3,14 @@
     <label v-if="label">{{ label }}</label>
     <slot />
     <p v-if="error">
-      {{error}}
+      {{ error }}
     </p>
   </div>
 </template>
 
-<script setup lang="ts" name="ElFormItem">import Schema from 'async-validator';
-import { emitter } from '../../emitter';
-import { FormItem,key } from './type';
+<script setup lang="ts" name="ElFormItem">import Schema from 'async-validator'
+import { emitter } from '../../emitter'
+import { FormItem,key } from './type'
 
 
 
