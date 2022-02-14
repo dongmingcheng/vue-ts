@@ -14,7 +14,7 @@ import { emitter } from '../../emitter'
 // PropType自动推断类型,确保传入类型和Rules的类型一致
 const props = defineProps({
     model:{type:Object, required:true},
-    rules:{type:Object as PropType<Rules>, required:false}
+    rules:{type:Object as PropType<Rules>, required:false, default:undefined}
 })
 
 // 将数据传递到所有的子组件
