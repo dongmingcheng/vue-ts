@@ -1,8 +1,26 @@
 <script setup lang="ts">
+import { FormType } from './components/form/type';
+
 const comp = ref('form')
 const model = reactive({
   ruleName:''
 })
+const rules = reactive({
+  ruleName:[
+    {required:true, message:'请输入用户姓名'}
+  ]
+})
+
+const myForm = ref<FormType>()
+const login = () => {
+  myForm.value?.validate( isValid => {
+    if(isValid){
+      console.log(model)
+    }else{
+      
+    }
+  })
+}
 </script>
 
 <template>
@@ -37,12 +55,23 @@ const model = reactive({
   </div>
   <div v-if="comp == 'form'">
     表单测试
-    <el-form :model="model">
-      <el-form-item label="姓名" prop="ruleName">
-        <el-input v-model="model.ruleName"></el-input>
+    <el-form :model="model" :rules="rules" ref="myForm">
+      <el-form-item
+        label="姓名"
+        prop="ruleName"
+      >
+        <el-input v-model="model.ruleName" />
+      </el-form-item>
+      <br>
+      <el-form-item>
+        <button
+          @click="login"
+        >
+          登 录
+        </button>
       </el-form-item>
     </el-form>
-    {{model.ruleName}}
+    {{ model.ruleName }}
   </div>
 </template>
 
